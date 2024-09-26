@@ -1,90 +1,63 @@
-# Data Science Internship Task 5
-<br>
-<img src="https://github.com/kindo-tk/PRODIGY_DS_05/blob/main/ds5.png">
+# Prodigy InfoTech Data Science Internship Task 5
 
-Welcome to the repository for my traffic accident data analysis project, completed during my data science internship at `Prodigy Infotech`. This project involves data cleaning, exploratory data analysis (EDA), visualization, and deriving insights from a dataset containing traffic accident records.
+Analyze traffic accident data to identify patterns related to road conditions, weather, and time of day. Visualize accident hotspots and contributing factors.
 
-## Project Overview
+### Task Completed
 
-The goal of this project is to analyze traffic accident data to understand patterns and trends, identify accident hotspots, and provide actionable insights that can help in enhancing road safety measures.
+This submission fulfills the requirements of Task 5, which was to perform data analysis on traffic accident data, identify patterns related to contributing factors, and visualize accident hotspots.
 
-## Data Description
+### Methodology:
 
-The <a href = "https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents">`dataset`</a> used in this analysis contains the following attributes:
+- **Data Acquisition:** Collected traffic accident data from [Kaggle](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents) for analysis.
+- **Data Cleaning:** Handled missing data and ensured that the dataset was in a usable format for analysis.
+- **Exploratory Data Analysis (EDA):** Performed EDA to understand accident trends by city, state, weather, and year.
+- **Data Visualization:** Created visualizations to highlight accident patterns and identify contributing factors.
 
-| Attribute              | Description                                                                                     |
-|------------------------|-------------------------------------------------------------------------------------------------|
-| ID                     | This is a unique identifier of the accident record.                                             |
-| Severity               | Shows the severity of the accident, a number between 1 and 4, where 1 indicates the least impact and 4 indicates the most significant impact on traffic.|
-| Start_Time             | Shows start time of the accident in local time zone.                                            |
-| End_Time               | Shows end time of the accident in local time zone.                                              |
-| Start_Lat              | Shows latitude in GPS coordinate of the start point.                                            |
-| Start_Lng              | Shows longitude in GPS coordinate of the start point.                                           |
-| End_Lat                | Shows latitude in GPS coordinate of the end point.                                              |
-| End_Lng                | Shows longitude in GPS coordinate of the end point.                                             |
-| Distance(mi)           | The length of the road extent affected by the accident.                                         |
-| Description            | Shows natural language description of the accident.                                             |
-| Number                 | Shows the street number in the address field.                                                   |
-| Street                 | Shows the street name in the address field.                                                     |
-| Side                   | Shows the relative side of the street (Right/Left) in address field.                            |
-| City                   | Shows the city in the address field.                                                            |
-| County                 | Shows the county in the address field.                                                          |
-| State                  | Shows the state in the address field.                                                           |
-| Zipcode                | Shows the zipcode in the address field.                                                         |
-| Country                | Shows the country in the address field.                                                         |
-| Timezone               | Shows timezone based on the location of the accident (eastern, central, etc.).                  |
-| Airport_Code           | Denotes an airport-based weather station which is the closest one to the location of the accident.|
-| Weather_Timestamp      | Shows the time-stamp of the weather observation record (in local time).                         |
-| Temperature(F)         | Shows the temperature (in Fahrenheit).                                                          |
-| Wind_Chill(F)          | Shows the wind chill (in Fahrenheit).                                                           |
-| Humidity(%)            | Shows the humidity (in percentage).                                                             |
-| Pressure(in)           | Shows the air pressure (in inches).                                                             |
-| Visibility(mi)         | Shows visibility (in miles).                                                                    |
-| Wind_Direction         | Shows wind direction.                                                                           |
-| Wind_Speed(mph)        | Shows wind speed (in miles per hour).                                                           |
-| Precipitation(in)      | Shows precipitation amount in inches, if any.                                                   |
-| Weather_Condition      | Shows the weather condition (rain, snow, thunderstorm, fog, etc.).                              |
-| Amenity                | A POI annotation indicating the presence of an amenity in a nearby location.                    |
-| Bump                   | A POI annotation indicating the presence of a speed bump or hump in a nearby location.          |
-| Crossing               | A POI annotation indicating the presence of a crossing in a nearby location.                    |
-| Give_Way               | A POI annotation indicating the presence of a give_way in a nearby location.                    |
-| Junction               | A POI annotation indicating the presence of a junction in a nearby location.                    |
-| No_Exit                | A POI annotation indicating the presence of a no_exit in a nearby location.                     |
-| Railway                | A POI annotation indicating the presence of a railway in a nearby location.                     |
-| Roundabout             | A POI annotation indicating the presence of a roundabout in a nearby location.                  |
-| Station                | A POI annotation indicating the presence of a station in a nearby location.                     |
-| Stop                   | A POI annotation indicating the presence of a stop in a nearby location.                        |
-| Traffic_Calming        | A POI annotation indicating the presence of traffic calming measures in a nearby location.       |
-| Traffic_Signal         | A POI annotation indicating the presence of a traffic signal in a nearby location.              |
-| Turning_Loop           | A POI annotation indicating the presence of a turning loop in a nearby location.                |
-| Sunrise_Sunset         | Shows the period of day (i.e. day or night) based on sunrise/sunset.                            |
-| Civil_Twilight         | Shows the period of day (i.e. day or night) based on civil twilight.                            |
-| Nautical_Twilight      | Shows the period of day (i.e. day or night) based on nautical twilight.                         |
-| Astronomical_Twilight  | Shows the period of day (i.e. day or night) based on astronomical twilight.                     |
+### Visualizations:
 
-## Methodology
+- **Weather Conditions During Accidents:** Created a bar plot to display the distribution of weather conditions during accidents to identify the most common conditions in which accidents occurred.
+  
+- **Accident Trends by Year:** Visualized the number of accidents per year to observe the trend in traffic accidents over time.
 
-1. **Data Cleaning**: Handled missing values, converted data types, and ensured consistency across the dataset.
-2. **Exploratory Data Analysis (EDA)**: Analyzed the distribution and relationships of key variables to uncover patterns and insights.
-3. **Visualization**: Created various plots and charts to visually represent the data and findings.
+- **State-wise Accident Distribution:** Developed a bar plot showing the states with the most and least number of accidents to understand geographic accident patterns.
+  
+- **City-wise Accident Distribution:** Visualized the top 10 cities with the highest and lowest accident counts to compare traffic accident severity and density by city.
 
-## Key Findings
+- **Accident Severity Distribution:** Created a pie chart to illustrate the distribution of accident severity levels, categorizing them into four severity levels (1, 2, 3, and 4) for a clearer understanding of accident severity.
 
-- **City-wise Distribution**: Miami is the city with the most number of accidents, while Star Junction and Stromsburg have the least.
-- **State-wise Distribution**: California has the highest number of accidents, whereas South Dakota has the least.
-- **Yearly Trends**: The year 2021 saw the highest number of accidents.
-- **Severity Levels**: Most accidents were classified at severity level 2.
-- **Weather Conditions**: The majority of accidents occurred under fair weather conditions.
-- **Time of Day**: Most accidents happened in the morning.
+- **Accident Location Scatter Plot:** Created a scatter plot showing accident locations by latitude and longitude, categorized by state and accident severity.
 
-## Conclusion
+### Key Findings from Traffic Data Analysis:
 
-This analysis highlights key patterns in traffic accident data, such as high accident rates in densely populated areas like Miami and California, and a significant number of accidents occurring under fair weather conditions in the morning. These insights can inform road safety initiatives and policy decisions to reduce accidents and improve public safety.
+1. **City-wise Accident Distribution:** 
+   - **Miami** recorded the highest number of accidents, likely due to its dense population and high traffic volumes.
+   - Cities like **Star Junction** and **Stromsburg** reported the fewest accidents, corresponding to their smaller populations and lighter traffic.
 
-## Contact Information
-For any inquiries or feedback regarding this project, please contact:
+2. **State-wise Accident Distribution:**
+   - **California** had the most accidents, consistent with its extensive road network and high population.
+   - **South Dakota (SD)** had the fewest accidents, likely due to its lower population and traffic density.
 
-- <a href="https://www.linkedin.com/in/tufan-kundu-577945221/">Tufan Kundu (LinkedIn)</a>
-- Email: tufan.kundu11@gmail.com
+3. **Yearly Accident Trends:** 
+   - The year **2021** recorded the highest number of accidents, suggesting either increased traffic or better reporting systems during that period.
 
+4. **Accident Severity Levels:**
+   - Most accidents were classified as **severity level 2**, indicating that while accidents were frequent, the majority were not highly severe.
 
+5. **Weather Conditions During Accidents:** 
+   - A majority of accidents occurred in **fair weather**, indicating that factors other than poor weather, such as driver behavior or traffic conditions, were more influential in causing accidents.
+
+### Tools and Libraries:
+
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
+
+### Dataset Source:
+
+- The dataset used for this analysis can be found at: [Kaggle - US Accidents Data](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents)
+
+### Contact:
+
+- [Khan Sohail (LinkedIn)](https://www.linkedin.com/in/khan-sohail-386b2027a)
+- Gmail: ks646397@gmail.com
